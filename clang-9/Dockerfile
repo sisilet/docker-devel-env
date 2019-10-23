@@ -30,7 +30,7 @@ RUN wget -q -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
     llvm \
 #   python-clang \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/* \
+ && rm -rf /var/lib/apt/lists/*
 
 ENV CC clang
 ENV CXX clang++
