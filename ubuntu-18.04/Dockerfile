@@ -7,7 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo $TIMEZONE > /etc/timezone && \
   apt-get update && \
-  apt-get install apt-utils \
+  apt-get install apt-utils && \
   apt-get install -y tzdata && \
   rm /etc/localtime && \
   ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime && \

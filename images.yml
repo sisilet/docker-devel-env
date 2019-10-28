@@ -7,5 +7,6 @@ images:
  - ['ubuntu-18.04', 'cmake-3.15', 'clang-9']
  - ['ubuntu-18.04', 'cmake-3.15', 'clang-9', 'conan-1.19']
  - ['ubuntu-18.04', 'cmake-3.15', 'clang-9', 'conan-1.19', 'ninja']
+ - ['ubuntu-18.04', 'cmake-3.15', 'clang-9', 'conan-1.19', 'ninja', 'sshd']
 
 
