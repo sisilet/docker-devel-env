@@ -4,8 +4,8 @@
 BrainTwister/docker-devel-env - Build list of docker images
 """
 
-__author__ = "Bernd Doser"
-__email__ = "bernd.doser@braintwister.eu"
+__author__ = "sisilet"
+__email__ = ""
 __license__ = "MIT"
 
 import argparse
@@ -35,9 +35,9 @@ def build_images(image_type, image_list, args, docker_push):
                 cmd += ' --pull'
             if args.no_cache:
                 cmd += ' --no-cache'
-            cmd += ' -t braintwister/' + image_name
+            cmd += ' -t eric3322/' + image_name
             if image_type == 'images':
-                cmd += ' --build-arg BASE_IMAGE=braintwister/' + base
+                cmd += ' --build-arg BASE_IMAGE=eric3322/' + base
             cmd += ' .'
 
             if args.verbose > 1:
@@ -66,7 +66,7 @@ def build_images(image_type, image_list, args, docker_push):
 
                 if docker_push == True:
 
-                    cmd = 'docker push braintwister/' + image_name
+                    cmd = 'docker push eric3322/' + image_name
 
                     if args.verbose > 1:
                         print('Push command: ' + cmd)

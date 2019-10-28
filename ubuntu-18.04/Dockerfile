@@ -1,8 +1,8 @@
 FROM nvidia/cuda
 
-LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
+LABEL maintainer="sisilet"
 
-ARG TIMEZONE='Europe/Berlin'
+ARG TIMEZONE='Australia/Sydney'
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo $TIMEZONE > /etc/timezone && \
