@@ -16,3 +16,4 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
+#use "docker port <container> 22" to find the host port
