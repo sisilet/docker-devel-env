@@ -4,8 +4,8 @@
 BrainTwister/docker-devel-env - Build list of docker images
 """
 
-__author__ = "Bernd Doser"
-__email__ = "bernd.doser@braintwister.eu"
+__author__ = "sisilet"
+__email__ = ""
 __license__ = "MIT"
 
 import argparse

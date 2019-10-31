@@ -1,7 +1,7 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
-LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
+LABEL maintainer="sisilet"
 
 ARG MINOR_VERSION=3.15
 ARG PATCH_VERSION=3

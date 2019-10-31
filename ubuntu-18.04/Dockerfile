@@ -1,12 +1,14 @@
-FROM ubuntu:18.04
+FROM nvidia/cuda
 
-LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
+LABEL maintainer="sisilet"
 
-ARG TIMEZONE='Europe/Berlin'
+ARG TIMEZONE='Australia/Sydney'
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo $TIMEZONE > /etc/timezone && \
-  apt-get update && apt-get install -y tzdata && \
+  apt-get update && \
+  apt-get install apt-utils && \
+  apt-get install -y tzdata && \
   rm /etc/localtime && \
   ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime && \
   dpkg-reconfigure -f noninteractive tzdata && \
@@ -35,7 +37,6 @@ RUN apt-get update \
 RUN pip3 install --upgrade pip \
  && hash -r pip3 \
  && pip3 install -I pyyaml~=3.12 mysql-connector
-
 
 # Set aliases
 COPY aliases /tmp/
