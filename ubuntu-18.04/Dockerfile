@@ -34,7 +34,8 @@ RUN apt-get update \
 
 RUN pip3 install --upgrade pip \
  && hash -r pip3 \
- && pip3 install -I pyyaml~=3.12 
+ && pip3 install -I pyyaml~=3.12 mysql-connector
+
 
 # Set aliases
 COPY aliases /tmp/

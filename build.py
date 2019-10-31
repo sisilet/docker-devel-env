@@ -35,9 +35,9 @@ def build_images(image_type, image_list, args, docker_push):
                 cmd += ' --pull'
             if args.no_cache:
                 cmd += ' --no-cache'
-            cmd += ' -t braintwister/' + image_name
+            cmd += ' -t eric3322/' + image_name
             if image_type == 'images':
-                cmd += ' --build-arg BASE_IMAGE=braintwister/' + base
+                cmd += ' --build-arg BASE_IMAGE=eric3322/' + base
             cmd += ' .'
 
             if args.verbose > 1:
@@ -66,7 +66,7 @@ def build_images(image_type, image_list, args, docker_push):
 
                 if docker_push == True:
 
-                    cmd = 'docker push braintwister/' + image_name
+                    cmd = 'docker push eric3322/' + image_name
 
                     if args.verbose > 1:
                         print('Push command: ' + cmd)
@@ -96,7 +96,7 @@ def main():
     parser.add_argument('--pull', action="store_true", help='Always attempt to pull a newer version of the image')
 
     args = parser.parse_args()
-    image_list = yaml.load(open(args.images, 'r'));
+    image_list = yaml.load(open(args.images, 'r'))
 
     docker_push = bool(args.user) and bool(args.password)
 

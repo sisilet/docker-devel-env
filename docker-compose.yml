@@ -1,0 +1,20 @@
+version: '3'
+ 
+services:
+ 
+  bash:
+    image: eric3322/ubuntu-18.04-cuda-10.1-cmake-3.15-clang-9-conan-1.19-ninja
+    volumes:
+      - /opt/driveimage:/opt/projects
+      - home:/home/ubuntu
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - USER_NAME=ubuntu
+      - GROUP_NAME=ubuntu
+    privileged: true
+    stdin_open: true
+    tty: true
+ 
+volumes:
+  home:
