@@ -35,5 +35,5 @@ while p.poll() is None:
     print(line, end='')
 
 with open('images.yml', 'w') as f:
-    f.wirte(images_yml)
+    f.write(images_yml)
 
