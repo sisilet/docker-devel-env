@@ -15,7 +15,7 @@ images:
  - ['{base_image}', 'clang-9-bin', 'conan-1.19', 'ninja', 'misc']
  - ['{base_image}', 'clang-9-bin', 'conan-1.19', 'ninja', 'misc', 'nsight']
  """
- 
+
 submodule_folder = 'docker-devel-env'
 for i in [o for o in os.listdir(submodule_folder) if os.path.isdir(os.path.join(submodule_folder,o))]:
     
