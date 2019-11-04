@@ -8,3 +8,5 @@ RUN echo "deb http://ubuntu.mirror.digitalpacific.com.au/archive/ bionic main un
  && apt-get install -y graphviz \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install -I mysql-connector
