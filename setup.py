@@ -59,11 +59,6 @@ for i in [o for o in os.listdir(submodule_folder) if os.path.isdir(os.path.join(
         line = p.stdout.readline().decode('ascii', 'backslashreplace')
         print(line, end='')
 
-p = subprocess.Popen(f'docker pull braintwister/{base_image}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-while p.poll() is None:
-    line = p.stdout.readline().decode('ascii', 'backslashreplace')
-    print(line, end='')
-
 with open('images.yml', 'w') as f:
     f.write(images_yml)
 
