@@ -40,7 +40,7 @@ services:
         tty: true
  
 volumes:
-    home
+    home:
 """
 
 with open('docker-compose.yml', 'w') as f:
