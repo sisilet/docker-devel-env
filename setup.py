@@ -26,7 +26,7 @@ version: '3'
  
 services:
     bash:
-        image: eric3322/{full_image}
+        image: sisilet/{full_image}
         volumes:
             - ~/projects:/opt/projects
             - home:/home/ubuntu
