@@ -1,9 +1,0 @@
-
----
-images:
- - ['ubuntu-18.04-cuda-10.1-cmake-3.15', 'clang-9-bin']
- - ['ubuntu-18.04-cuda-10.1-cmake-3.15', 'clang-9-bin', 'conan-1.19']
- - ['ubuntu-18.04-cuda-10.1-cmake-3.15', 'clang-9-bin', 'conan-1.19', 'ninja']
- - ['ubuntu-18.04-cuda-10.1-cmake-3.15', 'clang-9-bin', 'conan-1.19', 'ninja', 'misc']
- - ['ubuntu-18.04-cuda-10.1-cmake-3.15', 'clang-9-bin', 'conan-1.19', 'ninja', 'misc', 'nsight']
- 
