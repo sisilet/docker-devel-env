@@ -1,7 +1,7 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
-LABEL maintainer="Eric"
+LABEL maintainer="sislet"
 
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
