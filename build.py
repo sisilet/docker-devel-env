@@ -35,9 +35,9 @@ def build_images(image_type, image_list, args, docker_push):
                 cmd += ' --pull'
             if args.no_cache:
                 cmd += ' --no-cache'
-            cmd += ' -t eric3322/' + image_name
+            cmd += ' -t sisilet/' + image_name
             if image_type == 'images':
-                cmd += ' --build-arg BASE_IMAGE=eric3322/' + base
+                cmd += ' --build-arg BASE_IMAGE=sisilet/' + base
             cmd += ' .'
 
             if args.verbose > 1:
@@ -66,7 +66,7 @@ def build_images(image_type, image_list, args, docker_push):
 
                 if docker_push == True:
 
-                    cmd = 'docker push eric3322/' + image_name
+                    cmd = 'docker push sisilet/' + image_name
 
                     if args.verbose > 1:
                         print('Push command: ' + cmd)
