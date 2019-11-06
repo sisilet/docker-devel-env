@@ -5,7 +5,7 @@ import sys
 import os
 
 base_image = 'ubuntu-18.04-cuda-10.1-cmake-3.15'
-extra_packages = ['clang-9-bin', 'conan-1.19', 'ninja', 'misc', 'nsight']
+extra_packages = ['clang-9-bin', 'conan-1.19', 'misc', 'vscode-1.39']
 
 images_block = ""
 image = f"'{base_image}'"
@@ -26,15 +26,17 @@ version: '3'
  
 services:
     bash:
-        image: sisilet/{full_image}
+        image: eric3322/{full_image}
         volumes:
             - ~/projects:/opt/projects
             - home:/home/ubuntu
+            - /tmp/.X11-unix:/tmp/.X11-unix:ro
         environment:
             - USER_ID=1000
             - GROUP_ID=1000
             - USER_NAME=ubuntu
             - GROUP_NAME=ubuntu
+            - DISPLAY
         privileged: true
         stdin_open: true
         tty: true

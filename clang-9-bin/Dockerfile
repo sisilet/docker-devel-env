@@ -14,9 +14,11 @@ RUN wget -q -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
     && rm -rf /var/lib/apt/lists/* \
     && curl -SL http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz \
         | tar -xJC . \
-    && mv clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04 clang_9.0.0 \
-    && echo 'export PATH=/clang_9.0.0/bin:$PATH' >> /etc/bash.bashrc \
-    && echo 'export LD_LIBRARY_PATH=/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> /etc/bash.bashrc \
+    && cp -R clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/* /usr \
+    && ls /usr/bin/clang \
+    && rm -rf clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04 \
+#    && echo 'export PATH=/clang_9.0.0/bin:$PATH' >> /etc/bash.bashrc \
+#    && echo 'export LD_LIBRARY_PATH=/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> /etc/bash.bashrc \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

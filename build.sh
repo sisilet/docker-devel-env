@@ -5,9 +5,8 @@ base='ubuntu-18.04-cuda-10.1-cmake-3.15'
 modules=(
     clang-9-bin
     conan-1.19
-    ninja
-    misc
-    nsight
+#    misc
+#    vscode-1.39
 )
 
 interactive=
