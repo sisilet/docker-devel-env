@@ -1,7 +1,6 @@
 #!/bin/bash
 
 docker run --rm -it \
-	--gpus all \
 	-e DISPLAY \
 	-e USER_ID=1000 \
 	-e GROUP_ID=1000 \
@@ -11,4 +10,5 @@ docker run --rm -it \
 	-v ~/projects:/opt/projects \
 	-v home:/home/eric \
 	--privileged \
-	eric3322q/ubuntu-18.04-cuda-10.1-cmake-3.15-clang-9-bin-conan-1.19-misc-vscode-1.39
+        eric3322/ubuntu-18.04-cuda-10.1-tensorflow-gpu-1.14-jupyter-1.0-cmake-3.15-clang-9-bin-conan-1.20-misc \
+	bash

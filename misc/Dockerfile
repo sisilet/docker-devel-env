@@ -10,3 +10,4 @@ RUN echo "deb http://ubuntu.mirror.digitalpacific.com.au/archive/ bionic main un
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install -I mysql-connector
+#RUN pip3 install -I pandas numpy matplotlib

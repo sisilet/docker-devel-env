@@ -1,10 +1,11 @@
 #!/bin/bash
 base_account='braintwister'
-base='ubuntu-18.04-cuda-10.1-cmake-3.15'
+base='ubuntu-18.04-cuda-10.1-tensorflow-gpu-1.14-jupyter-1.0'
 
 modules=(
+    cmake-3.15
     clang-9-bin
-    conan-1.19
+    conan-1.20
     misc
 #    vscode-1.39
 )
