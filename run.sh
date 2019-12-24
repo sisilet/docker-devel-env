@@ -10,5 +10,7 @@ docker run --rm -it \
 	-v ~/projects:/opt/projects \
 	-v home:/home/eric \
 	--privileged \
-        eric3322/ubuntu-18.04-cuda-10.1-tensorflow-gpu-1.14-jupyter-1.0-cmake-3.15-clang-9-bin-conan-1.20-misc \
+	eric3322/ubuntu-18.04-cuda-10.1-tensorflow-gpu-1.14-jupyter-1.0-cmake-3.15-clang-9-bin-conan-1.20-misc \
 	bash
+
+#        eric3322/ubuntu-18.04-cuda-10.1-tensorflow-gpu-1.14-jupyter-1.0-cmake-3.15-clang-9-bin-conan-1.20-misc \

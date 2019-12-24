@@ -28,11 +28,23 @@ while [ "$1" != "" ]; do
     shift
 done
 
-base_name=${base_account}/${base}
-docker pull $base_name
+if [ "$base" == "" ]; then
+    docker pull ubuntu:18.04
+    cd ubuntu-18.04-extra
+    curr_image=ubuntu-18.04-extra
+    docker build -t ${image_account}/ubuntu-18.04-extra --build-arg BASE_IMAGE=ubuntu:18.04 .
+    if [[ ! -z "$user" && ! -z "$password" ]]; then
+        docker push ${image_account}/ubuntu-18.04-extra
+    fi
+    curr_account=${image_account}
+    cd ..
+else
+    base_name=${base_account}/${base}
+    docker pull $base_name
+    curr_image=$base
+    curr_account=$base_account
+fi
 
-curr_image=$base
-curr_account=$base_account
 
 if [[ ! -z "$user" && ! -z "$password" ]]; then
     echo $password | docker login -u $user --password-stdin

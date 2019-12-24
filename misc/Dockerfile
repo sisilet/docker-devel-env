@@ -11,3 +11,23 @@ RUN echo "deb http://ubuntu.mirror.digitalpacific.com.au/archive/ bionic main un
 
 RUN pip3 install -I mysql-connector
 #RUN pip3 install -I pandas numpy matplotlib
+
+RUN /entrypoint.d/conan_add_repositorie.sh
+RUN conan profile new default --detect
+RUN conan profile update settings.compiler.libcxx=libstdc++11 default
+RUN conan install gtest/1.8.1@bincrafters/stable
+RUN conan install boost_atomic/1.69.0@bincrafters/stable
+RUN conan install boost_format/1.69.0@bincrafters/stable
+RUN conan install boost_asio/1.69.0@bincrafters/stable
+RUN conan install boost_system/1.69.0@bincrafters/stable
+RUN conan install boost_property_tree/1.69.0@bincrafters/stable
+RUN conan install boost_program_options/1.69.0@bincrafters/stable
+RUN conan install boost_beast/1.69.0@bincrafters/stable
+RUN conan install boost_stacktrace/1.69.0@bincrafters/stable
+RUN conan install boost_tokenizer/1.69.0@bincrafters/stable
+RUN conan install pcapplusplus/19.04@bincrafters/stable
+RUN conan install pistache/d5608a1@conan/stable
+RUN conan install rapidjson/1.1.0@bincrafters/stable
+RUN conan install spdlog/1.3.1@bincrafters/stable
+RUN conan install libpcap/1.8.1@bincrafters/stable
+RUN conan install mysql-connector-c/6.1.11@bincrafters/stable
